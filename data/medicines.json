@@ -1,0 +1,185 @@
+{
+    "Common Cold": [
+        {
+            "name": "Paracetamol",
+            "dosage": "500mg",
+            "frequency": "Every 6-8 hours",
+            "duration": "3-5 days"
+        },
+        {
+            "name": "Vitamin C",
+            "dosage": "500mg",
+            "frequency": "Once daily",
+            "duration": "5-7 days"
+        },
+        {
+            "name": "Warm saline gargle",
+            "dosage": "N/A",
+            "frequency": "2-3 times daily",
+            "duration": "Until relief"
+        }
+    ],
+    "Flu": [
+        {
+            "name": "Paracetamol",
+            "dosage": "500mg",
+            "frequency": "Every 6-8 hours",
+            "duration": "3-5 days"
+        },
+        {
+            "name": "Rest and Hydration",
+            "dosage": "N/A",
+            "frequency": "As needed",
+            "duration": "Until recovery"
+        }
+    ],
+    "Migraine": [
+        {
+            "name": "Ibuprofen",
+            "dosage": "400mg",
+            "frequency": "Every 6-8 hours",
+            "duration": "As needed"
+        },
+        {
+            "name": "Rest in dark room",
+            "dosage": "N/A",
+            "frequency": "As needed",
+            "duration": "Until relief"
+        }
+    ],
+    "Headache": [
+        {
+            "name": "Paracetamol",
+            "dosage": "500mg",
+            "frequency": "Every 6-8 hours",
+            "duration": "As needed"
+        },
+        {
+            "name": "Rest",
+            "dosage": "N/A",
+            "frequency": "As needed",
+            "duration": "Until relief"
+        }
+    ],
+    "Cardiac Issue": [
+        {
+            "name": "Consult Cardiologist Immediately",
+            "dosage": "N/A",
+            "frequency": "N/A",
+            "duration": "N/A"
+        }
+    ],
+    "Skin Allergy": [
+        {
+            "name": "Antihistamine (Cetirizine)",
+            "dosage": "10mg",
+            "frequency": "Once daily",
+            "duration": "3-5 days"
+        },
+        {
+            "name": "Topical Calamine Lotion",
+            "dosage": "Apply thin layer",
+            "frequency": "2-3 times daily",
+            "duration": "Until rash clears"
+        }
+    ],
+    "Gastroenteritis": [
+        {
+            "name": "Oral Rehydration Solution",
+            "dosage": "As per instructions",
+            "frequency": "Frequently",
+            "duration": "Until recovery"
+        },
+        {
+            "name": "Probiotics",
+            "dosage": "As per product",
+            "frequency": "Once daily",
+            "duration": "5-7 days"
+        }
+    ],
+    "Arthritis": [
+        {
+            "name": "Ibuprofen",
+            "dosage": "400mg",
+            "frequency": "Every 8 hours",
+            "duration": "As needed"
+        },
+        {
+            "name": "Warm compress",
+            "dosage": "N/A",
+            "frequency": "2-3 times daily",
+            "duration": "Until relief"
+        }
+    ],
+    "Anemia": [
+        {
+            "name": "Iron Supplements",
+            "dosage": "As prescribed by doctor",
+            "frequency": "Once daily",
+            "duration": "As per doctor's advice"
+        },
+        {
+            "name": "Vitamin B12",
+            "dosage": "As prescribed",
+            "frequency": "Once daily",
+            "duration": "As per doctor's advice"
+        }
+    ],
+    "Asthma": [
+        {
+            "name": "Inhaler (if prescribed)",
+            "dosage": "As per prescription",
+            "frequency": "As needed",
+            "duration": "As per doctor's advice"
+        },
+        {
+            "name": "Avoid triggers",
+            "dosage": "N/A",
+            "frequency": "Always",
+            "duration": "Ongoing"
+        }
+    ],
+    "Conjunctivitis": [
+        {
+            "name": "Antibiotic Eye Drops",
+            "dosage": "As prescribed",
+            "frequency": "2-3 times daily",
+            "duration": "5-7 days"
+        },
+        {
+            "name": "Warm compress",
+            "dosage": "N/A",
+            "frequency": "2-3 times daily",
+            "duration": "Until relief"
+        }
+    ],
+    "Ear Infection": [
+        {
+            "name": "Antibiotic Ear Drops",
+            "dosage": "As prescribed",
+            "frequency": "2-3 times daily",
+            "duration": "5-7 days"
+        },
+        {
+            "name": "Pain reliever (Paracetamol)",
+            "dosage": "500mg",
+            "frequency": "Every 6-8 hours",
+            "duration": "As needed"
+        }
+    ],
+    "Throat Infection": [
+        {
+            "name": "Warm saline gargle",
+            "dosage": "N/A",
+            "frequency": "3-4 times daily",
+            "duration": "Until relief"
+        },
+        {
+            "name": "Paracetamol",
+            "dosage": "500mg",
+            "frequency": "Every 6-8 hours",
+            "duration": "3-5 days"
+        }
+    ]
+}
+

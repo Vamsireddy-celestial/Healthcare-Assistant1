@@ -1,0 +1,150 @@
+symptoms,disease
+"fever,cough,headache,body ache",Common Cold
+"fever,cough,sore throat,runny nose",Flu
+"fever,cough,headache",Common Cold
+"cough,sneezing,runny nose",Common Cold
+"fever,chills,body ache",Flu
+"fever,cough,fatigue",Flu
+"sore throat,fever,cough",Flu
+"headache,nausea,dizziness",Migraine
+"severe headache,sensitivity to light",Migraine
+"headache,vomiting",Migraine
+"throbbing headache",Migraine
+"chest pain,shortness of breath,fatigue",Cardiac Issue
+"chest pain,heart palpitations",Cardiac Issue
+"chest pain,shortness of breath",Cardiac Issue
+"chest pain,arm pain",Cardiac Issue
+"rash,itching,redness",Skin Allergy
+"skin rash,itching",Skin Allergy
+"redness,itching,swelling",Skin Allergy
+"hives,itching",Skin Allergy
+"nausea,vomiting,stomach pain",Gastroenteritis
+"diarrhea,nausea,vomiting",Gastroenteritis
+"stomach pain,nausea",Gastroenteritis
+"vomiting,diarrhea,abdominal pain",Gastroenteritis
+"joint pain,swelling,stiffness",Arthritis
+"joint pain,morning stiffness",Arthritis
+"joint swelling,pain",Arthritis
+"knee pain,swelling",Arthritis
+"fatigue,weakness,pale skin",Anemia
+"fatigue,dizziness,weakness",Anemia
+"pale skin,fatigue",Anemia
+"weakness,shortness of breath",Anemia
+"cough,wheezing,shortness of breath",Asthma
+"wheezing,chest tightness",Asthma
+"shortness of breath,cough",Asthma
+"breathing difficulty,wheezing",Asthma
+"eye pain,redness,blurred vision",Conjunctivitis
+"red eyes,itching,discharge",Conjunctivitis
+"eye redness,watering",Conjunctivitis
+"eye irritation,redness",Conjunctivitis
+"ear pain,hearing loss,discharge",Ear Infection
+"ear pain,fever",Ear Infection
+"earache,discharge",Ear Infection
+"ear pain,hearing difficulty",Ear Infection
+"throat pain,difficulty swallowing,hoarseness",Throat Infection
+"sore throat,fever",Throat Infection
+"throat pain,swollen glands",Throat Infection
+"difficulty swallowing,sore throat",Throat Infection
+"fever,body ache,chills",Flu
+"fever,cough,headache,muscle pain",Flu
+"runny nose,sneezing,congestion",Common Cold
+"cough,headache,body ache",Common Cold
+"fever,headache,body ache",Common Cold
+"nausea,vomiting,diarrhea,fever",Gastroenteritis
+"abdominal pain,cramps,diarrhea",Gastroenteritis
+"stomach cramps,nausea",Gastroenteritis
+"chest pain,shortness of breath,dizziness",Cardiac Issue
+"chest discomfort,shortness of breath",Cardiac Issue
+"heart racing,chest pain",Cardiac Issue
+"headache,neck pain,stiffness",Migraine
+"headache,eye pain",Migraine
+"severe headache,nausea",Migraine
+"skin rash,redness,itching,bumps",Skin Allergy
+"itching,red patches",Skin Allergy
+"skin irritation,redness",Skin Allergy
+"joint pain,fatigue,stiffness",Arthritis
+"hand pain,swelling",Arthritis
+"back pain,stiffness",Arthritis
+"fatigue,headache,weakness",Anemia
+"tiredness,weakness",Anemia
+"pale skin,dizziness",Anemia
+"cough,chest tightness,shortness of breath",Asthma
+"wheezing,coughing fits",Asthma
+"breathing difficulty,chest tightness",Asthma
+"red eyes,itching,sticky discharge",Conjunctivitis
+"eye redness,pain,discharge",Conjunctivitis
+"watery eyes,redness",Conjunctivitis
+"ear pain,fullness,fever",Ear Infection
+"earache,discharge,fever",Ear Infection
+"ear pain,ringing",Ear Infection
+"sore throat,painful swallowing,fever",Throat Infection
+"throat pain,hoarse voice",Throat Infection
+"swollen throat,fever",Throat Infection
+"fever,chills,headache,body ache",Flu
+"high fever,cough,body ache",Flu
+"fever,sore throat,headache",Flu
+"cough,sneezing,watery eyes",Common Cold
+"runny nose,cough,headache",Common Cold
+"congestion,sneezing,cough",Common Cold
+"severe stomach pain,vomiting",Gastroenteritis
+"nausea,stomach cramps,diarrhea",Gastroenteritis
+"vomiting,dehydration",Gastroenteritis
+"chest pain,arm numbness",Cardiac Issue
+"chest pressure,shortness of breath",Cardiac Issue
+"irregular heartbeat,chest pain",Cardiac Issue
+"severe headache,light sensitivity,sound sensitivity",Migraine
+"migraine headache,nausea,vomiting",Migraine
+"pulsating headache",Migraine
+"widespread rash,itching",Skin Allergy
+"allergic reaction,itching,hives",Skin Allergy
+"contact dermatitis,redness",Skin Allergy
+"multiple joint pain,swelling",Arthritis
+"joint pain,warmth,redness",Arthritis
+"chronic joint pain",Arthritis
+"severe fatigue,shortness of breath",Anemia
+"anemia symptoms,fatigue",Anemia
+"weakness,fatigue,pale",Anemia
+"chronic cough,wheezing",Asthma
+"asthma attack,shortness of breath",Asthma
+"exercise induced wheezing",Asthma
+"pink eye,redness,discharge",Conjunctivitis
+"bacterial conjunctivitis,discharge",Conjunctivitis
+"viral conjunctivitis,redness",Conjunctivitis
+"middle ear infection,pain",Ear Infection
+"otitis media,fever",Ear Infection
+"ear infection,discharge",Ear Infection
+"strep throat,fever",Throat Infection
+"tonsillitis,sore throat",Throat Infection
+"pharyngitis,throat pain",Throat Infection
+"cold,cough,runny nose",Common Cold
+"cold,sneezing,blocked nose",Common Cold
+"cold,fever,sore throat",Common Cold
+"cold,body ache,headache",Common Cold
+"cold,congestion,sneezing",Common Cold
+"dry cough,sore throat,runny nose",Common Cold
+"stuffy nose,sneezing,cough",Common Cold
+"blocked nose,runny nose,cold",Common Cold
+"mild fever,cold,cough",Common Cold
+"cold,loss of appetite,fatigue",Common Cold
+"feeling cold,chills,cough",Common Cold
+"shivering,fever,cold",Flu
+"cold,scratchy throat,sneezing",Common Cold
+"post nasal drip,cough,sore throat",Common Cold
+"sinus pressure,headache,congestion",Common Cold
+"watery eyes,sneezing,runny nose",Common Cold
+"cold,tiredness,body ache",Common Cold
+"cold,muscle ache,headache",Common Cold
+"nasal congestion,cough,sore throat",Common Cold
+"cold,sore throat,hoarseness",Common Cold
+"runny nose,cold,headache",Common Cold
+"cold,fever,runny nose",Common Cold
+"sneezing,cold,congestion",Common Cold
+"cold,cough,fatigue",Common Cold
+"malaise,cold,fever",Flu
+"loss of appetite,cold,fatigue",Common Cold
+"mild fever,runny nose,sore throat",Common Cold
+"cold,body chills,headache",Flu
+"scratchy throat,runny nose,cough",Common Cold
+"stuffy nose,cold,sore throat",Common Cold
+"cold,watery eyes,congestion",Common Cold

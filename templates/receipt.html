@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultation Receipt - {{ consultation.token }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        .receipt-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .receipt-header {
+            text-align: center;
+            border-bottom: 3px solid #2c3e50;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .receipt-section {
+            margin-bottom: 30px;
+        }
+        .receipt-section h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .receipt-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .receipt-info-item {
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+        .receipt-info-item strong {
+            display: block;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        .token-display {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #e74c3c;
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .disclaimer {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin-top: 30px;
+            border-radius: 5px;
+        }
+        .btn-group {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .medicine-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        .medicine-table th {
+            background: #3498db;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #2980b9;
+        }
+        .medicine-table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            background: #f8f9fa;
+        }
+        .medicine-table tr:nth-child(even) td {
+            background: #ffffff;
+        }
+        .medicine-warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="receipt-container">
+        <div class="receipt-header">
+            <h1>🏥 Digital Consultation Receipt</h1>
+            <p>Smart Healthcare Assistant</p>
+        </div>
+
+        <div class="token-display">
+            Token Number: {{ consultation.token }}
+        </div>
+
+        <div class="receipt-section">
+            <h3>Patient Details</h3>
+            <div class="receipt-info">
+                <div class="receipt-info-item">
+                    <strong>Name:</strong>
+                    {{ consultation.patient_name }}
+                </div>
+                <div class="receipt-info-item">
+                    <strong>Age:</strong>
+                    {{ consultation.age }} years
+                </div>
+                <div class="receipt-info-item">
+                    <strong>Gender:</strong>
+                    {{ consultation.gender }}
+                </div>
+                <div class="receipt-info-item">
+                    <strong>Date & Time:</strong>
+                    {{ consultation.created_at.strftime('%Y-%m-%d %H:%M:%S') }}
+                </div>
+            </div>
+        </div>
+
+        <div class="receipt-section">
+            <h3>Consultation Details</h3>
+            <div class="receipt-info-item">
+                <strong>Symptoms:</strong>
+                {{ consultation.symptoms }}
+            </div>
+            <div class="receipt-info-item" style="margin-top: 15px;">
+                <strong>Predicted Disease:</strong>
+                {{ consultation.predicted_disease }}
+            </div>
+            <div class="receipt-info-item" style="margin-top: 15px;">
+                <strong>Recommended Specialization:</strong>
+                {{ consultation.recommended_specialization }}
+            </div>
+        </div>
+
+        {% if medicines %}
+        <div class="receipt-section">
+            <h3>💊 Temporary Medicine Suggestions</h3>
+            <div class="medicine-warning">
+                <strong>⚠️ Important:</strong> These are temporary suggestions for basic relief only. Please consult a healthcare professional for proper diagnosis and treatment.
+            </div>
+            <table class="medicine-table">
+                <thead>
+                    <tr>
+                        <th>Medicine Name</th>
+                        <th>Dosage</th>
+                        <th>Frequency</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for medicine in medicines %}
+                    <tr>
+                        <td>{{ medicine.name }}</td>
+                        <td>{{ medicine.dosage }}</td>
+                        <td>{{ medicine.frequency }}</td>
+                        <td>{{ medicine.duration }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
+
+        <div class="disclaimer">
+            <strong>⚠️ Important Notice:</strong>
+            <p>This is an advisory prediction based on AI analysis. This receipt is for reference during your medical visit. 
+            Please consult a qualified healthcare professional for proper diagnosis and treatment.</p>
+        </div>
+
+        <div class="btn-group">
+            <a href="/receipt/{{ consultation.id }}/download" class="btn btn-primary">Download PDF</a>
+            <a href="/" class="btn btn-secondary">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
+

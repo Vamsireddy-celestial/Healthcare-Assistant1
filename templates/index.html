@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Healthcare Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏥 Smart Healthcare Assistant</h1>
+            <p class="subtitle">AI-Powered Symptom Analysis & Medical Guidance</p>
+        </header>
+
+        <main>
+            <!-- Symptom Input Section -->
+            <section class="card" id="symptomSection">
+                <h2>Enter Your Symptoms</h2>
+                <form id="symptomForm">
+                    <div class="form-group">
+                        <label for="patientName">Patient Name *</label>
+                        <input type="text" id="patientName" name="patientName" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="age">Age *</label>
+                            <input type="number" id="age" name="age" min="1" max="120" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="gender">Gender *</label>
+                            <select id="gender" name="gender" required>
+                                <option value="">Select</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="symptomSearch">Symptoms * (Select from list)</label>
+                        <input 
+                            type="text" 
+                            id="symptomSearch" 
+                            name="symptomSearch" 
+                            placeholder="Search your symptom (e.g., fever, chest pain)" 
+                            autocomplete="off"
+                        >
+                        <select id="symptomSelect" size="6">
+                            {% for symptom in symptoms %}
+                            <option value="{{ symptom }}">{{ symptom }}</option>
+                            {% endfor %}
+                        </select>
+                        <button type="button" id="addSymptomBtn" class="btn btn-secondary" style="margin-top: 8px;">
+                            Add Selected Symptom
+                        </button>
+                        <div id="selectedSymptoms" class="selected-symptoms" style="margin-top: 10px;">
+                            <!-- Selected symptom chips will appear here -->
+                        </div>
+                        <small>You can select and add multiple symptoms from the list.</small>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Analyze Symptoms</button>
+                </form>
+            </section>
+
+            <!-- Results Section -->
+            <section class="card" id="resultsSection" style="display: none;">
+                <h2>Analysis Results</h2>
+                <div id="resultsContent"></div>
+            </section>
+
+            <!-- Medicine Suggestions Section -->
+            <section class="card" id="medicineSection" style="display: none;">
+                <h2>💊 Temporary Medicine Suggestions</h2>
+                <div class="warning-box">
+                    <strong>⚠️ Important:</strong> These are temporary suggestions for basic relief only. 
+                    Please consult a healthcare professional for proper diagnosis and treatment.
+                </div>
+                <div id="medicineContent"></div>
+            </section>
+
+            <!-- Medical Camps Section -->
+            <section class="card" id="campsSection">
+                <h2>🏥 Free Government Medical Camps</h2>
+                <div id="campsContent">
+                    <p class="loading">Loading camp information...</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Smart Healthcare Assistant | 
+                <a href="/admin/login">Admin Login</a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
+

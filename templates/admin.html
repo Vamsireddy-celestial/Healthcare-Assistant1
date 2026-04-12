@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Smart Healthcare Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔐 Admin Panel</h1>
+            <div style="text-align: right; margin-top: 10px;">
+                <a href="/admin/logout" class="btn btn-secondary">Logout</a>
+            </div>
+        </header>
+
+        <main>
+            <!-- Medical Camps Management -->
+            <section class="card">
+                <h2>🏥 Manage Medical Camps</h2>
+                <button class="btn btn-primary" onclick="showAddCampForm()">+ Add New Camp</button>
+                
+                <div id="campForm" style="display: none; margin-top: 20px;">
+                    <form id="campFormElement">
+                        <input type="hidden" id="campId" name="campId">
+                        <div class="form-group">
+                            <label for="campName">Camp Name *</label>
+                            <input type="text" id="campName" name="campName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Location *</label>
+                            <input type="text" id="location" name="location" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="campDate">Date *</label>
+                                <input type="date" id="campDate" name="campDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="campTime">Time *</label>
+                                <input type="text" id="campTime" name="campTime" placeholder="e.g., 9:00 AM - 5:00 PM" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="services">Services Offered *</label>
+                            <textarea id="services" name="services" rows="3" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactInfo">Contact Information</label>
+                            <input type="text" id="contactInfo" name="contactInfo">
+                        </div>
+                        <div class="btn-group">
+                            <button type="submit" class="btn btn-primary">Save Camp</button>
+                            <button type="button" class="btn btn-secondary" onclick="cancelCampForm()">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="campsList" style="margin-top: 30px;">
+                    <h3>Existing Medical Camps</h3>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Camp Name</th>
+                                    <th>Location</th>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for camp in camps %}
+                                <tr>
+                                    <td>{{ camp.camp_name }}</td>
+                                    <td>{{ camp.location }}</td>
+                                    <td>{{ camp.date.strftime('%Y-%m-%d') }}</td>
+                                    <td>{{ camp.time }}</td>
+                                    <td>
+                                        <button class="btn btn-small" onclick="editCamp({{ camp.id }})">Edit</button>
+                                        <button class="btn btn-small btn-danger" onclick="deleteCamp({{ camp.id }})">Delete</button>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Consultations -->
+            <section class="card">
+                <h2>📋 Recent Consultations</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Token</th>
+                                <th>Patient Name</th>
+                                <th>Age</th>
+                                <th>Predicted Disease</th>
+                                <th>Specialization</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for consultation in consultations %}
+                            <tr>
+                                <td>{{ consultation.token }}</td>
+                                <td>{{ consultation.patient_name }}</td>
+                                <td>{{ consultation.age }}</td>
+                                <td>{{ consultation.predicted_disease }}</td>
+                                <td>{{ consultation.recommended_specialization }}</td>
+                                <td>{{ consultation.created_at.strftime('%Y-%m-%d %H:%M') }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/admin.js') }}"></script>
+</body>
+</html>
+
